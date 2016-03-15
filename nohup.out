@@ -1,0 +1,119 @@
+
+> comments@0.0.0 start /opt/bitnami/apache2/htdocs/CS360/comments/comments
+> node ./bin/www
+
+connected to the database
+Tue, 15 Mar 2016 00:28:42 GMT express deprecated res.sendfile: Use res.sendFile instead at routes/index.js:26:6
+[0mGET / [32m200 [0m9.822 ms - 688[0m
+[0mGET /javascripts/comments.js [32m200 [0m1.877 ms - 860[0m
+In the GET route
+[ { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:18:14 GMT+0000 (UTC),
+    Comment: 'Hello!',
+    Name: 'James',
+    _id: 56e64996cda5eb4c277114c5 },
+  { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:19:03 GMT+0000 (UTC),
+    Comment: 'Hi',
+    Name: 'Joan',
+    _id: 56e649c7cda5eb4c277114c6 },
+  { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:19:58 GMT+0000 (UTC),
+    Comment: 'I like cheese',
+    Name: 'Sam',
+    _id: 56e649fecda5eb4c277114c7 },
+  { __v: 0,
+    Timestamp: Thu Sep 01 2016 03:14:05 GMT+0000 (UTC),
+    Comment: 'How\'s it goin?',
+    Name: 'Sam',
+    _id: 56e64b35be822469275d52dd } ]
+[0mGET /comment [32m200 [0m24.064 ms - 471[0m
+POST comment route
+{ Name: 'James',
+  Comment: 'Loads comments on page load',
+  Timestamp: Tue Mar 15 2016 00:29:33 GMT+0000 (UTC) }
+{ _id: 56e7576da645aacf32342b43,
+  Timestamp: Tue Mar 15 2016 00:29:33 GMT+0000 (UTC),
+  Comment: 'Loads comments on page load',
+  Name: 'James' }
+{ _id: 56e7576da645aacf32342b43,
+  Timestamp: Tue Mar 15 2016 00:29:33 GMT+0000 (UTC),
+  Comment: 'Loads comments on page load',
+  Name: 'James',
+  __v: 0 }
+[0mPOST /comment [32m200 [0m30.413 ms - 2[0m
+[0mGET / [36m304 [0m1.480 ms - -[0m
+[0mGET /javascripts/comments.js [36m304 [0m0.415 ms - -[0m
+In the GET route
+[ { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:18:14 GMT+0000 (UTC),
+    Comment: 'Hello!',
+    Name: 'James',
+    _id: 56e64996cda5eb4c277114c5 },
+  { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:19:03 GMT+0000 (UTC),
+    Comment: 'Hi',
+    Name: 'Joan',
+    _id: 56e649c7cda5eb4c277114c6 },
+  { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:19:58 GMT+0000 (UTC),
+    Comment: 'I like cheese',
+    Name: 'Sam',
+    _id: 56e649fecda5eb4c277114c7 },
+  { __v: 0,
+    Timestamp: Thu Sep 01 2016 03:14:05 GMT+0000 (UTC),
+    Comment: 'How\'s it goin?',
+    Name: 'Sam',
+    _id: 56e64b35be822469275d52dd },
+  { __v: 0,
+    Timestamp: Tue Mar 15 2016 00:29:33 GMT+0000 (UTC),
+    Comment: 'Loads comments on page load',
+    Name: 'James',
+    _id: 56e7576da645aacf32342b43 } ]
+[0mGET /comment [32m200 [0m5.133 ms - 608[0m
+POST comment route
+{ Name: 'James',
+  Comment: '<script>console.log("Hello! friendly cross site scripting attack");</script>You can also likely xss attack',
+  Timestamp: Tue Mar 15 2016 00:33:20 GMT+0000 (UTC) }
+{ _id: 56e75850a645aacf32342b44,
+  Timestamp: Tue Mar 15 2016 00:33:20 GMT+0000 (UTC),
+  Comment: '<script>console.log("Hello! friendly cross site scripting attack");</script>You can also likely xss attack',
+  Name: 'James' }
+{ _id: 56e75850a645aacf32342b44,
+  Timestamp: Tue Mar 15 2016 00:33:20 GMT+0000 (UTC),
+  Comment: '<script>console.log("Hello! friendly cross site scripting attack");</script>You can also likely xss attack',
+  Name: 'James',
+  __v: 0 }
+[0mPOST /comment [32m200 [0m3.653 ms - 2[0m
+In the GET route
+[ { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:18:14 GMT+0000 (UTC),
+    Comment: 'Hello!',
+    Name: 'James',
+    _id: 56e64996cda5eb4c277114c5 },
+  { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:19:03 GMT+0000 (UTC),
+    Comment: 'Hi',
+    Name: 'Joan',
+    _id: 56e649c7cda5eb4c277114c6 },
+  { __v: 0,
+    Timestamp: Mon Mar 14 2016 05:19:58 GMT+0000 (UTC),
+    Comment: 'I like cheese',
+    Name: 'Sam',
+    _id: 56e649fecda5eb4c277114c7 },
+  { __v: 0,
+    Timestamp: Thu Sep 01 2016 03:14:05 GMT+0000 (UTC),
+    Comment: 'How\'s it goin?',
+    Name: 'Sam',
+    _id: 56e64b35be822469275d52dd },
+  { __v: 0,
+    Timestamp: Tue Mar 15 2016 00:29:33 GMT+0000 (UTC),
+    Comment: 'Loads comments on page load',
+    Name: 'James',
+    _id: 56e7576da645aacf32342b43 },
+  { __v: 0,
+    Timestamp: Tue Mar 15 2016 00:33:20 GMT+0000 (UTC),
+    Comment: '<script>console.log("Hello! friendly cross site scripting attack");</script>You can also likely xss attack',
+    Name: 'James',
+    _id: 56e75850a645aacf32342b44 } ]
+[0mGET /comment [32m200 [0m3.630 ms - 826[0m
